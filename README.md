@@ -75,4 +75,8 @@ sed -i 's/pi/mike/' 010_mike-nopasswd
 
 From https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
 
+All models require a 5.1V supply
+
+Absolute Range: 4.63V (+/- 5%) to 5.25V
+
 
