@@ -57,3 +57,22 @@ sed -i 's/pi/mike/' 010_mike-nopasswd
 * https://github.com/Argon40Tech/Argon-ONE-i2c-Codes/blob/master/README.md - i2c fan control
 * https://gitlab.com/DarkElvenAngel/argononed - alt daemon
 
+# Power
+
+| Product |	Recommended PSU current capacity | Maximum total USB peripheral current draw | Typical bare-board active current consumption |
+| ------- | -------------------------------- | ----------------------------------------- | --------------------------------------------- |
+| Raspberry Pi Model A |	700mA |	500mA |	200mA |
+| Raspberry Pi Model B |	1.2A |	500mA |	500mA |
+| Raspberry Pi Model A+ |	700mA |	500mA |	180mA |
+| Raspberry Pi Model B+ |	1.8A |	1.2A |	330mA |
+| Raspberry Pi 2 Model B |	1.8A |	1.2A |	350mA |
+| Raspberry Pi 3 Model B |	2.5A |	1.2A |	400mA |
+| Raspberry Pi 3 Model A+ |	2.5A |	Limited by PSU, board, and connector ratings only. |	350mA |
+| Raspberry Pi 3 Model B+ |	2.5A |	1.2A |	500mA |
+| Raspberry Pi 4 Model B |	3.0A |	1.2A |	600mA |
+| Raspberry Pi Zero |	1.2A |	Limited by PSU, board, and connector ratings only |	100mA |
+| Raspberry Pi Zero W/WH |	1.2A |	Limited by PSU, board, and connector ratings only. |	150mA |
+
+From https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
+
+
