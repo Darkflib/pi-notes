@@ -49,11 +49,11 @@ sed -i 's/pi/mike/' 010_mike-nopasswd
 
 # LIRCD Alts
 
-http://manpages.ubuntu.com/manpages/bionic/man1/ir-keytable.1.html
-http://manpages.ubuntu.com/manpages/bionic/man1/ir-ctl.1.html
+* http://manpages.ubuntu.com/manpages/bionic/man1/ir-keytable.1.html
+* http://manpages.ubuntu.com/manpages/bionic/man1/ir-ctl.1.html
 
 # Argon One stuff
 
-https://github.com/Argon40Tech/Argon-ONE-i2c-Codes/blob/master/README.md - i2c fan control
-https://gitlab.com/DarkElvenAngel/argononed - alt daemon
+* https://github.com/Argon40Tech/Argon-ONE-i2c-Codes/blob/master/README.md - i2c fan control
+* https://gitlab.com/DarkElvenAngel/argononed - alt daemon
 
