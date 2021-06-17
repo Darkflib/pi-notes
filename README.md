@@ -2,6 +2,9 @@
 
 ## build-in / on-board LEDs
 
+* led0 - Green
+* led1 - Red
+
 ```
 echo none > /sys/class/leds/led0/trigger    # Disable SD card triggering (mmc0)
 echo 255 > /sys/class/leds/led0/brightness  # Turn On (as it doesn't support variable brightness, anything other than 0 works)
