@@ -80,3 +80,68 @@ All models require a 5.1V supply
 Absolute Range: 4.63V (+/- 5%) to 5.25V
 
 
+# Images
+
+* https://downloads.raspberrypi.org/raspios_lite_arm64/images/ - 64bit lite
+* https://downloads.raspberrypi.org/raspios_arm64/ -- 64bit 
+
+
+# Power
+
+The default CPU governor is `ondemand`, the governor can be manually changed with the `cpufreq-set` command (from the cpufrequtils package) to reduce idle power consumption:
+```
+sudo apt install cpufrequtils
+sudo cpufreq-set -g powersave
+```
+
+| Governor |
+| -------- |
+| Performance |
+| Powersave |
+| Userspace |
+| Ondemand |
+| Conservative |
+| Schedutil |
+
+
+# Temp
+
+```
+vcgencmd measure_temp
+```
+
+
+# Clock
+
+`measure_clock [clock]`
+
+This returns the current frequency of the specified clock. The options are:
+
+| clock |	Description |
+| ----- | ----------- |
+| arm |	ARM core(s) |
+| core |	GPU core |
+| H264 |	H.264 block |
+| isp |	Image Sensor Pipeline |
+| v3d |	3D block |
+| uart |	UART |
+| pwm |	PWM block (analogue audio output) |
+| emmc |	SD card interface |
+| pixel |	Pixel valves |
+| vec |	Analogue video encoder |
+| hdmi |	HDMI |
+| dpi |	Display Parallel Interface |
+
+# Bootloader
+
+* https://www.raspberrypi.org/documentation/hardware/raspberrypi/booteeprom.md
+
+```
+vcgencmd bootloader_version
+```
+
+```
+sudo rpi-eeprom-update  # check if update available
+sudo rpi-eeprom-update -a
+sudo reboot
+```
