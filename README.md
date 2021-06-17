@@ -103,6 +103,39 @@ sudo cpufreq-set -g powersave
 | Conservative |
 | Schedutil |
 
+* https://www.kernel.org/doc/Documentation/cpu-freq/governors.txt
+
+
+Create a file `/etc/default/cpufrequtils` with these contents
+
+```
+GOVERNOR="performance"
+```
+
+
+
+
+```
+> cd /sys/devices/system/cpu
+> cat cpu0/cpufreq/scaling_available_governors
+conservative ondemand userspace powersave performance
+```
+
+To check:
+
+```
+> cat cpu0/cpufreq/scaling_governor
+ondemand
+```
+
+To change it:
+
+`echo performance > cpu0/cpufreq/scaling_governor`
+or
+`sudo sh -c "echo performance > cpu0/cpufreq/scaling_governor"`
+
+
+
 
 # Temp
 
