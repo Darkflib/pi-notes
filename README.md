@@ -186,3 +186,15 @@ sudo rpi-eeprom-update  # check if update available
 sudo rpi-eeprom-update -a
 sudo reboot
 ```
+
+
+# Swap (dphy-swapfile)
+
+```
+> dphys-swapfile swapoff
+> dphys-swapfile uninstall
+> systemctl disable dphys-swapfile.service 
+Synchronizing state of dphys-swapfile.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install disable dphys-swapfile
+Removed /etc/systemd/system/multi-user.target.wants/dphys-swapfile.service.
+```
