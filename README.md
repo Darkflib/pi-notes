@@ -57,7 +57,7 @@ sed -i 's/pi/mike/' 010_mike-nopasswd
 * https://github.com/Argon40Tech/Argon-ONE-i2c-Codes/blob/master/README.md - i2c fan control
 * https://gitlab.com/DarkElvenAngel/argononed - alt daemon
 
-# Power
+# Power Consumption
 
 | Product |	Recommended PSU current capacity | Maximum total USB peripheral current draw | Typical bare-board active current consumption |
 | ------- | -------------------------------- | ----------------------------------------- | --------------------------------------------- |
@@ -86,25 +86,28 @@ Absolute Range: 4.63V (+/- 5%) to 5.25V
 * https://downloads.raspberrypi.org/raspios_arm64/ -- 64bit 
 
 
-# Power
+# Frequency scaling
 
 The default CPU governor is `ondemand`, the governor can be manually changed with the `cpufreq-set` command (from the cpufrequtils package) to reduce idle power consumption:
+
 ```
 sudo apt install cpufrequtils
 sudo cpufreq-set -g powersave
 ```
+## Governor types
 
-| Governor |
-| -------- |
-| Performance |
-| Powersave |
-| Userspace |
-| Ondemand |
-| Conservative |
-| Schedutil |
+| Governor | Description |
+| -------- | ----------- |
+| performance | |
+| powersave | |
+| userspace | |
+| ondemand | |
+| conservative | |
+| schedutil | |
 
 * https://www.kernel.org/doc/Documentation/cpu-freq/governors.txt
 
+## Setting the default governor
 
 Create a file `/etc/default/cpufrequtils` with these contents
 
@@ -113,7 +116,7 @@ GOVERNOR="performance"
 ```
 
 
-
+## Setting the governor per core
 
 ```
 > cd /sys/devices/system/cpu
@@ -131,7 +134,9 @@ ondemand
 To change it:
 
 `echo performance > cpu0/cpufreq/scaling_governor`
+
 or
+
 `sudo sh -c "echo performance > cpu0/cpufreq/scaling_governor"`
 
 
