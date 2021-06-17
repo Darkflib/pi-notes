@@ -9,7 +9,7 @@ echo 0 > /sys/class/leds/led0/brightness    # Turn Off
 ```
 
 ### Or in python
-```
+```python
 #!/usr/bin/python
 
 import RPi.GPIO as GPIO
