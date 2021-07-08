@@ -198,3 +198,11 @@ Synchronizing state of dphys-swapfile.service with SysV service script with /lib
 Executing: /lib/systemd/systemd-sysv-install disable dphys-swapfile
 Removed /etc/systemd/system/multi-user.target.wants/dphys-swapfile.service.
 ```
+
+# Timezone
+
+```
+date
+timedatectl set-timezone UTC
+date
+```
