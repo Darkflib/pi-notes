@@ -50,17 +50,17 @@ cp 010_pi-nopasswd 010_mike-nopasswd
 sed -i 's/pi/mike/' 010_mike-nopasswd 
 ```
 
-# LIRCD Alts
+## LIRCD Alts
 
 * http://manpages.ubuntu.com/manpages/bionic/man1/ir-keytable.1.html
 * http://manpages.ubuntu.com/manpages/bionic/man1/ir-ctl.1.html
 
-# Argon One stuff
+## Argon One stuff
 
 * https://github.com/Argon40Tech/Argon-ONE-i2c-Codes/blob/master/README.md - i2c fan control
 * https://gitlab.com/DarkElvenAngel/argononed - alt daemon
 
-# Power Consumption
+## Power Consumption
 
 | Product |	Recommended PSU current capacity | Maximum total USB peripheral current draw | Typical bare-board active current consumption |
 | ------- | -------------------------------- | ----------------------------------------- | --------------------------------------------- |
@@ -83,13 +83,13 @@ All models require a 5.1V supply
 Absolute Range: 4.63V (+/- 5%) to 5.25V
 
 
-# Images
+## Images
 
 * https://downloads.raspberrypi.org/raspios_lite_arm64/images/ - 64bit lite
 * https://downloads.raspberrypi.org/raspios_arm64/ -- 64bit 
 
 
-# Frequency scaling
+## Frequency scaling
 
 The default CPU governor is `ondemand`, the governor can be manually changed with the `cpufreq-set` command (from the cpufrequtils package) to reduce idle power consumption:
 
@@ -145,14 +145,14 @@ or
 
 
 
-# Temp
+## Temp
 
 ```
 vcgencmd measure_temp
 ```
 
 
-# Clock
+## Clock
 
 `measure_clock [clock]`
 
@@ -173,7 +173,7 @@ This returns the current frequency of the specified clock. The options are:
 | hdmi |	HDMI |
 | dpi |	Display Parallel Interface |
 
-# Bootloader
+## Bootloader
 
 * https://www.raspberrypi.org/documentation/hardware/raspberrypi/booteeprom.md
 
@@ -188,7 +188,7 @@ sudo reboot
 ```
 
 
-# Swap (dphy-swapfile)
+## Swap (dphy-swapfile)
 
 ```
 > dphys-swapfile swapoff
@@ -199,7 +199,7 @@ Executing: /lib/systemd/systemd-sysv-install disable dphys-swapfile
 Removed /etc/systemd/system/multi-user.target.wants/dphys-swapfile.service.
 ```
 
-# Timezone
+## Timezone
 
 ```
 date
