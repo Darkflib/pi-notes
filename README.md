@@ -46,6 +46,7 @@ usermod -a -G video mike    # Required for vcgencmd (for temps etc)
 
 ## Give user passwordless sudo
 ```
+cd /etc/sudoers.d
 cp 010_pi-nopasswd 010_mike-nopasswd
 sed -i 's/pi/mike/' 010_mike-nopasswd 
 ```
@@ -206,3 +207,11 @@ date
 timedatectl set-timezone UTC
 date
 ```
+
+## Lock pi user
+
+```
+usermod -L pi
+```
+
+
