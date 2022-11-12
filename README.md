@@ -215,3 +215,33 @@ usermod -L pi
 ```
 
 
+## Overclock
+
+```
+arm_boost=1
+```
+
+```
+#Overclock
+arm_freq=2300
+gpu_freq=500
+over_voltage=14
+force_turbo=1
+```
+
+```
+arm_freq=2275
+gpu_freq=750
+over_voltage=8
+```
+
+```
+over_voltage=6
+arm_freq=2000
+```
+
+```
+over_voltage=6
+arm_freq=2000
+gpu_freq=750
+```
