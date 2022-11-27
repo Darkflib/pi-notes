@@ -61,6 +61,11 @@ sed -i 's/pi/mike/' 010_mike-nopasswd
 * https://github.com/Argon40Tech/Argon-ONE-i2c-Codes/blob/master/README.md - i2c fan control
 * https://gitlab.com/DarkElvenAngel/argononed - alt daemon
 
+```
+wget https://download.argon40.com/argon1.sh
+bash argon1.sh
+```
+
 ## Power Consumption
 
 | Product |	Recommended PSU current capacity | Maximum total USB peripheral current draw | Typical bare-board active current consumption |
